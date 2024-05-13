@@ -18,9 +18,15 @@ main {
 }
 
 .logopt {
-  position: absolute;
   width: 80px;
   height: 80px;
+  position: absolute;
+  top: 9%;
+  left: 40%;
+  filter: drop-shadow(2px 1px 1px);
+  /* padding: 8px;
+  background-color: #ffffff;
+  border-radius: 20px; */
 }
 
 .logo {
