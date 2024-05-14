@@ -7,14 +7,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon-16.png" />
     <title>Login</title>
   </head>
   <body>
     <main>
-      <div class="logo"><img src="logo10anos.png" class="imglogo" /></div>
+      <div class="logo">
+        <a href="https://ipdec.org/">
+          <img src="./logo10anos.png" class="imglogo" />
+        </a>
+      </div>
       <div class="container" id="container">
         <div class="form-container sign-up">
+          <img src="./ipdec-logo.svg" class="logo11" />
           <form>
             <h1>Crie sua conta</h1>
             <div class="social-icons">
@@ -26,13 +32,14 @@
               ></a>
             </div>
             <span>ou complete os dados para se cadastrar</span>
-            <input type="text" placeholder="Nome" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <button>Cadastrar</button>
+            <input type="text" placeholder="Nome" required id="name" />
+            <input type="email" placeholder="Email" required id="email" />
+            <input type="password" placeholder="Senha" required id="password" />
+            <button type="submit" id="cadastrar">Cadastrar</button>
           </form>
         </div>
         <div class="form-container sign-in">
+          <img src="./ipdec-logo.svg" class="logo10" />
           <form>
             <h1>Entrar</h1>
             <div class="social-icons">
@@ -44,16 +51,15 @@
               ></a>
             </div>
             <span>ou use seu email e senha</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
+            <input type="email" placeholder="Email" required id="email" />
+            <input type="password" placeholder="Senha" required id="password" />
             <a href="#">Esqueci minha senha</a>
-            <button>Entrar</button>
+            <button type="submit" id="entrar">Entrar</button>
           </form>
         </div>
         <div class="toggle-container">
           <div class="toggle">
             <div class="toggle-panel toggle-left">
-              <img src="logopt.png" class="logopt" />
               <h1>Bem vindo de volta!</h1>
               <p>
                 Insira seus dados pessoais para usar todos os recursos do site
@@ -61,9 +67,6 @@
               <button class="hidden" id="login">Entrar</button>
             </div>
             <div class="toggle-panel toggle-right">
-              <div class="logor">
-                <img src="logopt.png" class="logopt" />
-              </div>
               <h1>Olá, Ipdecker!</h1>
               <p>
                 Cadastre-se com seus dados pessoais para usar todos os recursos
@@ -76,6 +79,7 @@
       </div>
 
       <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </main>
   </body>
 </html>

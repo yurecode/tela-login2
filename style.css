@@ -17,16 +17,22 @@ main {
   height: 100vh;
 }
 
-.logopt {
-  width: 80px;
-  height: 80px;
+.logo10 {
+  width: 120px; 
   position: absolute;
-  top: 9%;
-  left: 40%;
-  filter: drop-shadow(2px 1px 1px);
+  top: 3%;
+  left: 5%;
+  /* filter: drop-shadow(2px 1px 1px); */
   /* padding: 8px;
   background-color: #ffffff;
   border-radius: 20px; */
+}
+
+.logo11 {
+  width: 120px;
+  position: absolute;
+  top: 3%;
+  right: 5%;
 }
 
 .logo {
@@ -39,7 +45,7 @@ main {
 .imglogo {
   width: 10rem;
   padding: 1rem;
-  filter: drop-shadow(1px 1px 1px);
+  /* filter: drop-shadow(1px 1px 1px); */
 }
 
 .container {
