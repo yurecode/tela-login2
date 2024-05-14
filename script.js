@@ -3,14 +3,18 @@ const registerBtn = document.getElementById('register')
 const loginBtn = document.getElementById('login')
 const loginForm = document.querySelector('#form')
 const emailInput = document.querySelector('#email')
+const nameInput = document.querySelector('#name')
 const passwordInput = document.querySelector('#password')
+const emailFocus = document.getElementById('emailFocus')
 
 registerBtn.addEventListener('click', () => {
   container.classList.add('active')
+  nameInput.focus()
 })
 
 loginBtn.addEventListener('click', () => {
   container.classList.remove('active')
+  emailFocus.focus()
 })
 
 document.addEventListener('DOMContentLoaded', () => {
