@@ -33,10 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = { email, password }
 
     try {
-      const response = await axios.post(
-        'http://localhost:3006/auth/login',
-        body
-      )
+      const response = await axios.post('http://10.1.1.9:3006/auth/login', body)
 
       localStorage.setItem('token', response.data.accessToken)
       window.location.href = 'home.html'
@@ -78,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // Fazer requisição POST para cadastrar o usuário
-      const response = await axios.post('http://localhost:3006/user', userData)
+      const response = await axios.post('http://10.1.1.9:3006/user', userData)
 
       // Se o cadastro for bem-sucedido, você pode exibir uma mensagem ou redirecionar para a página de login
       console.log('Usuário cadastrado com sucesso:', response.data)
