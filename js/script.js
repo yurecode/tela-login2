@@ -33,10 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = { email, password }
 
     try {
-      const response = await axios.post('http://10.1.1.9:3006/auth/login', body)
+      const response = await axios.post(
+        'http://localhost:3006/auth/login',
+        body
+      )
 
       localStorage.setItem('token', response.data.accessToken)
-      window.location.href = 'home.html'
+      window.location.href = './../html/home.html'
     } catch (error) {
       console.error('Erro ao fazer login:', error.response.data.message)
       // Mostrar mensagem de erro na interface do usuário
@@ -75,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // Fazer requisição POST para cadastrar o usuário
-      const response = await axios.post('http://10.1.1.9:3006/user', userData)
+      const response = await axios.post('http://localhost:3006/user', userData)
 
       // Se o cadastro for bem-sucedido, você pode exibir uma mensagem ou redirecionar para a página de login
       console.log('Usuário cadastrado com sucesso:', response.data)
@@ -88,13 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Mostrar mensagem de erro na interface do usuário
     }
   })
-
-  // Verificar se há um token armazenado no localStorage ao carregar a página
-  const storedToken = localStorage.getItem('token')
-  if (storedToken) {
-    console.log('Token JWT armazenado:', storedToken)
-    // Você pode usar o token armazenado para fazer requisições autenticadas
-  }
 
   const loginBtn = document.getElementById('login')
   loginBtn.addEventListener('click', () => {

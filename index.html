@@ -7,20 +7,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="./favicon-16.png" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link rel="icon" href="./../images/favicon-16.png" />
     <title>Login</title>
   </head>
   <body>
     <main>
       <div class="logo">
+        <!-- <button id="toggleTheme">Alternar Tema</button> -->
         <a href="https://ipdec.org/">
-          <img src="./logo10anos.png" class="imglogo" />
+          <img src="./../images/logo10anos.png" class="imglogo" />
         </a>
       </div>
       <div class="container" id="container">
         <div class="form-container sign-up">
-          <img src="./ipdec-logo.svg" class="logo11" />
+          <img src="./../images/ipdec-logo.svg" class="logo11" />
           <form>
             <h1>Crie sua conta</h1>
             <div class="social-icons">
@@ -34,12 +35,17 @@
             <span>ou complete os dados para se cadastrar</span>
             <input type="text" placeholder="Nome" required id="name" />
             <input type="email" placeholder="Email" required id="email" />
-            <input type="password" placeholder="Senha" required id="password" />
+            <input
+              type="password"
+              placeholder="Senha"
+              required
+              id="password2"
+            />
             <button type="submit" id="cadastrar">Cadastrar</button>
           </form>
         </div>
         <div class="form-container sign-in">
-          <img src="./ipdec-logo.svg" class="logo10" />
+          <img src="./../images/ipdec-logo.svg" class="logo10" />
           <form>
             <h1>Entrar</h1>
             <div class="social-icons">
@@ -59,7 +65,9 @@
               autofocus
             />
             <input type="password" placeholder="Senha" required id="password" />
-            <a href="#">Esqueci minha senha</a>
+            <a href="./html/forgot-password.html" id="forgot"
+              >Esqueci minha senha</a
+            >
             <button type="submit" id="entrar">Entrar</button>
           </form>
         </div>
@@ -84,7 +92,7 @@
         </div>
       </div>
 
-      <script src="script.js"></script>
+      <script src="./../js/script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </main>
   </body>
